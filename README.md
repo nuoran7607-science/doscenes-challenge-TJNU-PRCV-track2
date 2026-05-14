@@ -65,6 +65,10 @@ runs/v1/
     └── last_model.pth
 ```
 
+### Pretrained Weights
+
+Download `best_model.pth` (635 MB) from [GitHub Releases](https://github.com/nuoran7607-science/doscenes-challenge_TJNU-PRCV/releases/tag/v1.0).
+
 ### Inference Only
 
 Generate `submission.csv` from a trained checkpoint:
