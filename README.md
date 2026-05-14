@@ -79,7 +79,6 @@ python submit_track2.py \
     --test_pkl datasets/pre_processed_data/test_track2.pkl \
     --out_dir submission \
     --n_steps 5 \
-    --no_baseline
 ```
 
 ## Data Preprocessing (Optional)
