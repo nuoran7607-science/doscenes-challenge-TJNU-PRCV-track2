@@ -37,7 +37,25 @@ pip install torch==2.6.0 transformers==4.57.3 nuscenes-devkit==1.1.11 numpy pand
 
 ## Quick Start
 
-### Train + Auto-Submit
+### Pretrained Weights
+
+Download `best_model.pth` (635 MB) from [GitHub Releases](https://github.com/nuoran7607-science/doscenes-challenge_TJNU-PRCV/releases/tag/v1.0).
+
+### Inference Only
+
+Generate `submission.csv` from a trained checkpoint for Track 2 evaluation:
+
+```bash
+python submit_track2.py \
+    --ckpt best_model.pth \
+    --test_pkl datasets/pre_processed_data/test_track2.pkl \
+    --out_dir submission \
+    --no_baseline \
+```
+
+Note: This script will output `submission.csv` in the specified --out_dir.
+
+### Train from Scratch
 
 Training automatically runs test inference and writes the official submission.csv after completion.
 
@@ -64,21 +82,6 @@ runs/v1/
 └── checkpoints/
     ├── best_model.pth
     └── last_model.pth
-```
-
-### Pretrained Weights
-
-Download `best_model.pth` (635 MB) from [GitHub Releases](https://github.com/nuoran7607-science/doscenes-challenge_TJNU-PRCV/releases/tag/v1.0).
-
-### Inference Only
-
-Generate submission.csv from a trained checkpoint for Track 2 evaluation:
-
-```bash
-python submit_track2.py \
-    --ckpt best_model.pth \
-    --test_pkl datasets/pre_processed_data/test_track2.pkl \
-    --out_dir submission \
 ```
 
 ## Data Preprocessing (Optional)
