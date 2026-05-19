@@ -1,6 +1,8 @@
-# doScenes Challenge — Track 2/3: Instructed Trajectory Prediction and Ablation
+# doScenes Challenge — Track 2: Language + History
 
-Solution for [doScenes Instructed Driving Challenge](https://mi3-lab.github.io/doScenes_challenge) Track 2 (Language + History → Future Trajectory).
+This repository contains the solution for the [doScenes Instructed Driving Challenge](https://mi3-lab.github.io/doScenes_challenge) **Track 2 (Language + History → Future Trajectory)**.
+
+The goal of this track is to predict the ego-vehicle's future trajectory (next 6 seconds) using only 2 seconds of historical trajectory and a natural language instruction, without any visual input.
 
 ## Project Structure
 
@@ -37,7 +39,7 @@ pip install torch==2.6.0 transformers==4.57.3 nuscenes-devkit==1.1.11 numpy pand
 
 ### Train + Auto-Submit
 
-Training automatically runs test inference and writes `submission.csv` after completion.
+Training automatically runs test inference and writes the official submission.csv after completion.
 
 ```bash
 python train.py \
@@ -56,7 +58,7 @@ runs/v1/
 ├── config.json
 ├── metrics.jsonl
 ├── summary.json
-├── submission.csv
+├── submission.csv               # Official track 2 submission
 ├── submission_baseline.csv
 ├── tensorboard/
 └── checkpoints/
@@ -70,7 +72,7 @@ Download `best_model.pth` (635 MB) from [GitHub Releases](https://github.com/nuo
 
 ### Inference Only
 
-Generate `submission.csv` from a trained checkpoint for track2, and `submission_baseline.csv` for track3:
+Generate submission.csv from a trained checkpoint for Track 2 evaluation:
 
 ```bash
 python submit_track2.py \
