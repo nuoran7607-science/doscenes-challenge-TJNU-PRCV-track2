@@ -1,4 +1,4 @@
-# doScenes Challenge — Track 2: Instructed Trajectory Prediction
+# doScenes Challenge — Track 2/3: Instructed Trajectory Prediction and Abalition
 
 Solution for [doScenes Instructed Driving Challenge](https://mi3-lab.github.io/doScenes_challenge) Track 2 (Language + History → Future Trajectory).
 
