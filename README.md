@@ -47,8 +47,7 @@ python train.py \
     --scorer_k 50 \
     --scorer_start_epoch 30 \
     --warmup_epochs 10 \
-    --val_n_steps 20 \
-    --submit_n_steps 5
+    --val_n_steps 20
 ```
 
 Outputs are saved to `runs/v1/`:
@@ -71,14 +70,13 @@ Download `best_model.pth` (635 MB) from [GitHub Releases](https://github.com/nuo
 
 ### Inference Only
 
-Generate `submission.csv` from a trained checkpoint:
+Generate `submission.csv` from a trained checkpoint for track2, and `submission_baseline.csv` for track3:
 
 ```bash
 python submit_track2.py \
     --ckpt best_model.pth \
     --test_pkl datasets/pre_processed_data/test_track2.pkl \
     --out_dir submission \
-    --n_steps 5 \
 ```
 
 ## Data Preprocessing (Optional)
